@@ -14,10 +14,11 @@ jobs:
     - name: Installing Node
       uses: actions/setup-node@v3.7.0
       with:
-        node-version: 16
+        node-version: 20
 
     - name: Build
       run: |
+        sudo apt update && sudo apt install libfontconfig1-dev
         yarn cache clean
         cd app
         yarn

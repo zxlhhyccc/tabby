@@ -21,7 +21,7 @@
 
 <br/>
 <p align="center">
-Esse README também está disponível em: <a  href="./README.md">:gb: English</a> · <a  href="./README.es-ES.md">:es: Spanish</a> · <a  href="./README.ru-RU.md">:ru: Русский</a> · <a  href="./README.ko-KR.md">:kr: 한국어</a> · <a  href="./README.zh-CN.md">:cn: 简体中文</a> · <a  href="./README.it-IT.md">:it: Italiano</a> · <a href="./README.de-DE.md">:de: Deutsch</a> · <a href="./README.ja-JP.md">:jp: 日本語</a> · <a href="./README.id-ID.md">:id: Bahasa Indonesia</a>
+Esse README também está disponível em: <a  href="./README.md">:gb: English</a> · <a  href="./README.es-ES.md">:es: Spanish</a> · <a  href="./README.ru-RU.md">:ru: Русский</a> · <a  href="./README.ko-KR.md">:kr: 한국어</a> · <a  href="./README.zh-CN.md">:cn: 简体中文</a> · <a  href="./README.it-IT.md">:it: Italiano</a> · <a href="./README.de-DE.md">:de: Deutsch</a> · <a href="./README.ja-JP.md">:jp: 日本語</a> · <a href="./README.id-ID.md">:id: Bahasa Indonesia</a> · <a href="./README.pl-PL.md">:poland: Polski</a>
 </p>
 
 ----
@@ -67,7 +67,7 @@ Esse README também está disponível em: <a  href="./README.md">:gb: English</a
 
 ![](docs/readme-terminal.png)
 
-* Um terminal V220 + várias extensões
+* Um terminal VT220 + várias extensões
 * Múltiplos painéis divididos aninhados
 * Guias em qualquer lado da janela
 * Opção de minimizar para a barra de tarefas com uma tecla de atalho global ("Quake console")
@@ -246,7 +246,7 @@ Obrigado vai para essas pessoas maravilhosas ([emoji key](https://allcontributor
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mwz"><img src="https://avatars.githubusercontent.com/u/1190768?v=4?s=100" width="100px;" alt="Michael Wizner"/><br /><sub><b>Michael Wizner</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=mwz" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mgrulich"><img src="https://avatars.githubusercontent.com/u/781036?v=4?s=100" width="100px;" alt="Martin"/><br /><sub><b>Martin</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=mgrulich" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/piersandro"><img src="https://avatars.githubusercontent.com/u/19996309?v=4?s=100" width="100px;" alt="Piersandro Guerrera"/><br /><sub><b>Piersandro Guerrera</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=piersandro" title="Documentation">📖</a> <a href="#translation-piersandro" title="Translation">🌍</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://pingbase.cn"><img src="https://avatars.githubusercontent.com/u/19320096?v=4?s=100" width="100px;" alt="X-0x01"/><br /><sub><b>X-0x01</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=X-0x01" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/0x973"><img src="https://avatars.githubusercontent.com/u/19320096?v=4?s=100" width="100px;" alt="0x973"/><br /><sub><b>0x973</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=0x973" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Allenator"><img src="https://avatars.githubusercontent.com/u/11794943?v=4?s=100" width="100px;" alt="Allenator"/><br /><sub><b>Allenator</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=Allenator" title="Documentation">📖</a></td>
     </tr>
     <tr>
@@ -334,6 +334,22 @@ Obrigado vai para essas pessoas maravilhosas ([emoji key](https://allcontributor
       <td align="center" valign="top" width="14.28%"><a href="https://siebsie23.nl/"><img src="https://avatars.githubusercontent.com/u/25083973?v=4?s=100" width="100px;" alt="Sibren"/><br /><sub><b>Sibren</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=siebsie23" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.nathaniel-walser.com"><img src="https://avatars.githubusercontent.com/u/33339996?v=4?s=100" width="100px;" alt="Nathaniel Walser"/><br /><sub><b>Nathaniel Walser</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=nwalser" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/aaronhuggins"><img src="https://avatars.githubusercontent.com/u/16567111?v=4?s=100" width="100px;" alt="Aaron Huggins"/><br /><sub><b>Aaron Huggins</b></sub></a><br /><a href="#design-aaronhuggins" title="Design">🎨</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://zkxdex.github.io/"><img src="https://avatars.githubusercontent.com/u/66271780?v=4?s=100" width="100px;" alt="KDex"/><br /><sub><b>KDex</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=zKXDEX" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kimbob13"><img src="https://avatars.githubusercontent.com/u/26755098?v=4?s=100" width="100px;" alt="ChangHwan Kim"/><br /><sub><b>ChangHwan Kim</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=kimbob13" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ashneilson"><img src="https://avatars.githubusercontent.com/u/35913512?v=4?s=100" width="100px;" alt="Ash Neilson"/><br /><sub><b>Ash Neilson</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=ashneilson" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/cfs4819"><img src="https://avatars.githubusercontent.com/u/53071761?v=4?s=100" width="100px;" alt="Chen Fansong"/><br /><sub><b>Chen Fansong</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=cfs4819" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://5k.work/"><img src="https://avatars.githubusercontent.com/u/82694310?v=4?s=100" width="100px;" alt="Mxmilu"/><br /><sub><b>Mxmilu</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=Mxmilu666" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://cbuff.dev"><img src="https://avatars.githubusercontent.com/u/29805363?v=4?s=100" width="100px;" alt="Charles Buffington"/><br /><sub><b>Charles Buffington</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=C41M50N" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/GeminiLn"><img src="https://avatars.githubusercontent.com/u/12425057?v=4?s=100" width="100px;" alt="Yu Qin"/><br /><sub><b>Yu Qin</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=GeminiLn" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/fireblue"><img src="https://avatars.githubusercontent.com/u/1034929?v=4?s=100" width="100px;" alt="fireblue"/><br /><sub><b>fireblue</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=fireblue" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/marko1616"><img src="https://avatars.githubusercontent.com/u/45327989?v=4?s=100" width="100px;" alt="marko1616"/><br /><sub><b>marko1616</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=marko1616" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.selfhosted.sg/"><img src="https://avatars.githubusercontent.com/u/128927132?v=4?s=100" width="100px;" alt="SelfHosted"/><br /><sub><b>SelfHosted</b></sub></a><br /><a href="#financial-SelfHosted-Club" title="Financial">💵</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://hiroga.hatenablog.com/"><img src="https://avatars.githubusercontent.com/u/13391129?v=4?s=100" width="100px;" alt="Hiroaki Ogasawara"/><br /><sub><b>Hiroaki Ogasawara</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=xhiroga" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/geodic"><img src="https://avatars.githubusercontent.com/u/64704703?v=4?s=100" width="100px;" alt="geodic"/><br /><sub><b>geodic</b></sub></a><br /><a href="https://github.com/Eugeny/tabby/commits?author=geodic" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

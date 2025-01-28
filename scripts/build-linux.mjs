@@ -13,6 +13,7 @@ builder({
     armv7l: process.env.ARCH === 'armv7l',
     arm64: process.env.ARCH === 'arm64',
     config: {
+        npmRebuild: false,
         extraMetadata: {
             version: vars.version,
         },
@@ -24,7 +25,7 @@ builder({
             },
         ] : undefined,
     },
-    publish: process.env.KEYGEN_TOKEN ? isTag ? 'always' : 'onTagOrDraft' : 'never',
+    publish: (process.env.KEYGEN_TOKEN && isTag) ? 'always' : 'never',
 }).catch(e => {
     console.error(e)
     process.exit(1)

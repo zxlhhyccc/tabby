@@ -5,7 +5,7 @@ import * as os from 'os'
 import promiseIpc, { RendererProcessType } from 'electron-promise-ipc'
 import { execFile } from 'mz/child_process'
 import { Injectable, NgZone } from '@angular/core'
-import { PlatformService, ClipboardContent, Platform, MenuItemOptions, MessageBoxOptions, MessageBoxResult, FileUpload, FileDownload, FileUploadOptions, wrapPromise, TranslateService } from 'tabby-core'
+import { PlatformService, ClipboardContent, Platform, MenuItemOptions, MessageBoxOptions, MessageBoxResult, DirectoryUpload, FileUpload, FileDownload, FileUploadOptions, wrapPromise, TranslateService } from 'tabby-core'
 import { ElectronService } from '../services/electron.service'
 import { ElectronHostWindow } from './hostWindow.service'
 import { ShellIntegrationService } from './shellIntegration.service'
@@ -18,7 +18,7 @@ const fontManager = require('fontmanager-redux') // eslint-disable-line
 
 try {
     // eslint-disable-next-line no-var
-    var windowsProcessTreeNative = require('windows-process-tree/build/Release/windows_process_tree.node')
+    var windowsProcessTreeNative = require('@tabby-gang/windows-process-tree/build/Release/windows_process_tree.node')
     // eslint-disable-next-line no-var
     var wnr = require('windows-native-registry')
 } catch { }
@@ -46,6 +46,21 @@ export class ElectronPlatformService extends PlatformService {
         electron.nativeTheme.on('updated', () => {
             this.zone.run(() => this.themeChanged.next(this.getTheme()))
         })
+    }
+
+    async getAllFiles (dir: string, root: DirectoryUpload): Promise<DirectoryUpload> {
+        const items = await fs.readdir(dir, { withFileTypes: true })
+        for (const item of items) {
+            if (item.isDirectory()) {
+                root.pushChildren(await this.getAllFiles(path.join(dir, item.name), new DirectoryUpload(item.name)))
+            } else {
+                const file = new ElectronFileUpload(path.join(dir, item.name), this.electron)
+                root.pushChildren(file)
+                await wrapPromise(this.zone, file.open())
+                this.fileTransferStarted.next(file)
+            }
+        }
+        return root
     }
 
     readClipboard (): string {
@@ -216,6 +231,28 @@ export class ElectronPlatformService extends PlatformService {
         }))
     }
 
+    async startUploadDirectory (paths?: string[]): Promise<DirectoryUpload> {
+        const properties: any[] = ['openFile', 'treatPackageAsDirectory', 'openDirectory']
+
+        if (!paths) {
+            const result = await this.electron.dialog.showOpenDialog(
+                this.hostWindow.getWindow(),
+                {
+                    buttonLabel: this.translate.instant('Select'),
+                    properties,
+                },
+            )
+            if (result.canceled) {
+                return new DirectoryUpload()
+            }
+            paths = result.filePaths
+        }
+
+        const root = new DirectoryUpload()
+        root.pushChildren(await this.getAllFiles(paths[0].split(path.sep).join(path.posix.sep), new DirectoryUpload(path.basename(paths[0]))))
+        return root
+    }
+
     async startDownload (name: string, mode: number, size: number, filePath?: string): Promise<FileDownload|null> {
         if (!filePath) {
             const result = await this.electron.dialog.showSaveDialog(
@@ -263,12 +300,12 @@ class ElectronFileUpload extends FileUpload {
     private size: number
     private mode: number
     private file: fs.FileHandle
-    private buffer: Buffer
+    private buffer: Uint8Array
     private powerSaveBlocker = 0
 
     constructor (private filePath: string, private electron: ElectronService) {
         super()
-        this.buffer = Buffer.alloc(256 * 1024)
+        this.buffer = new Uint8Array(256 * 1024)
         this.powerSaveBlocker = electron.powerSaveBlocker.start('prevent-app-suspension')
     }
 
@@ -291,7 +328,7 @@ class ElectronFileUpload extends FileUpload {
         return this.size
     }
 
-    async read (): Promise<Buffer> {
+    async read (): Promise<Uint8Array> {
         const result = await this.file.read(this.buffer, 0, this.buffer.length, null)
         this.increaseProgress(result.bytesRead)
         return this.buffer.slice(0, result.bytesRead)
@@ -333,7 +370,7 @@ class ElectronFileDownload extends FileDownload {
         return this.size
     }
 
-    async write (buffer: Buffer): Promise<void> {
+    async write (buffer: Uint8Array): Promise<void> {
         let pos = 0
         while (pos < buffer.length) {
             const result = await this.file.write(buffer, pos, buffer.length - pos, null)
