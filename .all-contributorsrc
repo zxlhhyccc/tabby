@@ -635,10 +635,10 @@
       ]
     },
     {
-      "login": "X-0x01",
-      "name": "X-0x01",
+      "login": "0x973",
+      "name": "0x973",
       "avatar_url": "https://avatars.githubusercontent.com/u/19320096?v=4",
-      "profile": "http://pingbase.cn",
+      "profile": "https://github.com/0x973",
       "contributions": [
         "code"
       ]
@@ -1246,6 +1246,114 @@
       "profile": "https://github.com/aaronhuggins",
       "contributions": [
         "design"
+      ]
+    },
+    {
+      "login": "zKXDEX",
+      "name": "KDex",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66271780?v=4",
+      "profile": "https://zkxdex.github.io/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "kimbob13",
+      "name": "ChangHwan Kim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26755098?v=4",
+      "profile": "https://github.com/kimbob13",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ashneilson",
+      "name": "Ash Neilson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35913512?v=4",
+      "profile": "https://github.com/ashneilson",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "cfs4819",
+      "name": "Chen Fansong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53071761?v=4",
+      "profile": "https://github.com/cfs4819",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Mxmilu666",
+      "name": "Mxmilu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82694310?v=4",
+      "profile": "https://5k.work/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "C41M50N",
+      "name": "Charles Buffington",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29805363?v=4",
+      "profile": "https://cbuff.dev",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "GeminiLn",
+      "name": "Yu Qin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12425057?v=4",
+      "profile": "https://github.com/GeminiLn",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "fireblue",
+      "name": "fireblue",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1034929?v=4",
+      "profile": "https://github.com/fireblue",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "marko1616",
+      "name": "marko1616",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45327989?v=4",
+      "profile": "https://github.com/marko1616",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "SelfHosted-Club",
+      "name": "SelfHosted",
+      "avatar_url": "https://avatars.githubusercontent.com/u/128927132?v=4",
+      "profile": "https://www.selfhosted.sg/",
+      "contributions": [
+        "financial"
+      ]
+    },
+    {
+      "login": "xhiroga",
+      "name": "Hiroaki Ogasawara",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13391129?v=4",
+      "profile": "http://hiroga.hatenablog.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "geodic",
+      "name": "geodic",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64704703?v=4",
+      "profile": "https://github.com/geodic",
+      "contributions": [
+        "code"
       ]
     }
   ],

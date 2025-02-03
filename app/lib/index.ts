@@ -1,5 +1,8 @@
 import { app, ipcMain, Menu, dialog } from 'electron'
 
+// set userData Path on portable version
+import './portable'
+
 // set defaults of environment variables
 import 'dotenv/config'
 process.env.TABBY_PLUGINS ??= ''
@@ -7,7 +10,6 @@ process.env.TABBY_CONFIG_DIRECTORY ??= app.getPath('userData')
 
 
 import 'v8-compile-cache'
-import './portable'
 import 'source-map-support/register'
 import './sentry'
 import './lru'
@@ -28,6 +30,8 @@ try {
     dialog.showErrorBox('Could not read config', err.message)
     app.exit(1)
 }
+
+process.mainModule = module
 
 const application = new Application(configStore)
 

@@ -13,6 +13,7 @@ import { ResizeEvent, BaseTerminalProfile } from './interfaces'
 import { TerminalDecorator } from './decorator'
 import { SearchPanelComponent } from '../components/searchPanel.component'
 import { MultifocusService } from '../services/multifocus.service'
+import { getTerminalBackgroundColor } from '../helpers'
 
 
 const INACTIVE_TAB_UNLOAD_DELAY = 1000 * 30
@@ -97,7 +98,7 @@ export class BaseTerminalTabComponent<P extends BaseTerminalProfile> extends Bas
     profile: P
 
     /**
-     * Enables normall passthrough from session output to terminal input
+     * Enables normal passthrough from session output to terminal input
      */
     enablePassthrough = true
 
@@ -290,7 +291,7 @@ export class BaseTerminalTabComponent<P extends BaseTerminalProfile> extends Bas
                     break
                 case 'delete-previous-word':
                     this.forEachFocusedTerminalPane(tab => {
-                        tab.sendInput('\x1b\x7f')
+                        tab.sendInput('\u0017')
                     })
                     break
                 case 'delete-next-word':
@@ -575,14 +576,7 @@ export class BaseTerminalTabComponent<P extends BaseTerminalProfile> extends Bas
     configure (): void {
         this.frontend?.configure(this.profile)
 
-        if (!this.themes.findCurrentTheme().followsColorScheme && this.config.store.terminal.background === 'colorScheme') {
-            const scheme = this.profile.terminalColorScheme ?? this.config.store.terminal.colorScheme
-            if (scheme.background) {
-                this.backgroundColor = scheme.background
-            }
-        } else {
-            this.backgroundColor = null
-        }
+        this.backgroundColor = getTerminalBackgroundColor(this.config, this.themes, this.profile.terminalColorScheme)
     }
 
     zoomIn (): void {

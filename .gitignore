@@ -33,7 +33,7 @@ docs/api
 sentry.properties
 sentry-symbols.js
 
-tabby-ssh/util/pagent.exe
 *.psd
 
 crowdin.yml
+.crowdin.env
